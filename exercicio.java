@@ -1,15 +1,22 @@
+import java.util.Random;
+
 public class exercicio {
 
   public static void main(String[] args) {
-    Grafo grafo = new Grafo(6);
+    Random rnd = new Random();
+    int numvert = 100000; // PARA ALTERAR O NUMERO DE VERTICES DO GRAFO, ALTERAR ESTA VARIAVEL;
+    Grafo grafo = new Grafo(numvert);
     metodoFleury fleury = new metodoFleury();
-    grafo.addAresta(0, 1); // TODO FUTURO FOR
-    grafo.addAresta(0, 2);
-    grafo.addAresta(1, 2);
-    grafo.addAresta(2, 3);
-    grafo.addAresta(3, 4);
-    grafo.addAresta(3, 5);
-    grafo.addAresta(4, 5);
+
+    for (int i = 0; i < grafo.getVertices(); i++) {
+      Integer numeroAleatorio = rnd.nextInt(numvert);
+      if (numeroAleatorio == i || grafo.getListaAdj()[i].size() >= 2) {
+        continue;
+      } else {
+        grafo.addAresta(i, numeroAleatorio);
+      }
+    }
+
     System.out.println("------------------------");
     System.out.print(fleury.doMetodoFleury(grafo));
     System.out.println("\n------------------------");

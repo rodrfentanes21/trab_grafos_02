@@ -20,11 +20,13 @@ public class metodoFleury {
       quantidadeTotal++;
     }
 
-    if (quantidadeImpar > 2) {
-      return "O grafo é não-eureliano";
-    } else {
-      mostraCaminho(grafo, posicao);
-    }
+    // if (quantidadeImpar > 2) {
+    //   return "O grafo é não-eureliano";
+    // } else {
+    //   mostraCaminho(grafo, posicao);
+    // }
+    mostraCaminho(grafo, posicao);
+
     if (camim == grafo.getQuantArestas()) {
       return caminho;
     } else {
