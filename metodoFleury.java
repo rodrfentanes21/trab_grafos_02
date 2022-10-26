@@ -21,7 +21,7 @@ public class metodoFleury {
     }
 
     if (quantidadeImpar > 2) {
-      System.out.println("O grafo é não-eureliano");
+      return "O grafo é não-eureliano";
     } else {
       mostraCaminho(grafo, posicao);
     }
