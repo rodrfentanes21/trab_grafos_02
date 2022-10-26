@@ -28,7 +28,7 @@ public class metodoFleury {
     if (camim == grafo.getQuantArestas()) {
       return caminho;
     } else {
-      return "O grafo é não-eureliano";
+      return caminho + "\n" + "O grafo é não-eureliano";
     }
   }
 
