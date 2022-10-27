@@ -21,7 +21,7 @@ public class metodoFleury {
     }
 
     if (quantidadeImpar > 2) {
-      return "O grafo é não-eureliano";
+      return "O grafo é não-eureliano, pois não possui 0 ou 2 vertices de grau ímpar";
     } else {
       mostraCaminho(grafo, posicao);
     }
