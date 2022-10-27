@@ -20,12 +20,11 @@ public class metodoFleury {
       quantidadeTotal++;
     }
 
-    // if (quantidadeImpar > 2) {
-    //   return "O grafo é não-eureliano";
-    // } else {
-    //   mostraCaminho(grafo, posicao);
-    // }
-    mostraCaminho(grafo, posicao);
+    if (quantidadeImpar > 2) {
+      return "O grafo é não-eureliano";
+    } else {
+      mostraCaminho(grafo, posicao);
+    }
 
     if (camim == grafo.getQuantArestas()) {
       return caminho;
@@ -39,7 +38,6 @@ public class metodoFleury {
       Integer adj = grafo.getListaAdj()[u].get(i);
       if (naive(grafo, u, adj)) {
         caminho += u + "-" + adj + " ";
-        // System.out.print(caminho);
         camim++;
         grafo.removeAresta(u, adj);
         mostraCaminho(grafo, adj);
